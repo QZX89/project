@@ -60,7 +60,7 @@ public class MasterPartition extends Thread{
         AConcept=dataFactory.getOWLClass(AInstance);
         
 		//Transform the input ontology
-		SplitSubClassAxioms(myOntology, dataFactory);
+		//SplitSubClassAxioms(myOntology, dataFactory);
 		
 		//execute twice random division
 		
