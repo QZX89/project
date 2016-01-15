@@ -36,7 +36,7 @@ public class MasterPartition extends Thread{
 	//constructor
 	public MasterPartition()
 	{
-		
+		//constructor
 	}
 	
 
@@ -47,7 +47,12 @@ public class MasterPartition extends Thread{
         this.reasonerFactory = new ReasonerFactory();
         OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
         //load the ontology
-        this.myOntology = manager.loadOntologyFromOntologyDocument(file); 
+        try {
+			this.myOntology = manager.loadOntologyFromOntologyDocument(file);
+		} catch (OWLOntologyCreationException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
         //Extract other Classes to check their satisfiability
         OWLDataFactory dataFactory=manager.getOWLDataFactory();
         //OWLDataFactory dataFactory= manager.
