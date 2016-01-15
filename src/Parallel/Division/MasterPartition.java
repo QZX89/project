@@ -37,6 +37,7 @@ public class MasterPartition extends Thread{
 	public MasterPartition()
 	{
 		//constructor
+		//yeah!yeah!
 	}
 	
 
