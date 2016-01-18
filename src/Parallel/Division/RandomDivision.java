@@ -44,9 +44,10 @@ public class RandomDivision extends Thread{
     //Arrange the divided groups for each thread
     public void arrangeDivision()
     {
-    	
+    	//follow the same method to divide for each thread
     }
     
+   
     
     
     //Divide the concepts into different groups
