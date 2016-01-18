@@ -61,16 +61,6 @@ public class TestCase {
         DConcept=dataFactory.getOWLClass(DInstance);
         AConcept=dataFactory.getOWLClass(AInstance);
         
-        
-        ManchesterOWLSyntaxOWLObjectRendererImpl rend = new ManchesterOWLSyntaxOWLObjectRendererImpl();
-        
-        Set<OWLClassAxiom> axiomD= myOntology.getAxioms(DConcept);
-        List<OWLAxiom> manchesteraxiom = new ArrayList<OWLAxiom>();
-        manchesteraxiom.addAll(axiomD);
-
-        System.out.println("re"+rend.render(manchesteraxiom.get(0)));
-        
-        //String manchesterDConcept=(rend.render(manchesteraxiom.get(0))).toString();
     }
     //@Ignore
     @Test
