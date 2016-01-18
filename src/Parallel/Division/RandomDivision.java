@@ -27,14 +27,27 @@ public class RandomDivision extends Thread{
     //Get all the possible concepts from the possible list
     public void getAllPossibleConcepts()
     {
+    	//get the number of the total concepts
+    	
+    	//create an array with the same size
+    	
+    	//put all the concepts in the array with an unique index
     	
     }
     
     //Disorder the sequence of the possible concept list
     public void disorderSequence()
     {
+    	//use shuffle function to disorder the sequence
+    }
+    
+    //Arrange the divided groups for each thread
+    public void arrangeDivision()
+    {
     	
     }
+    
+    
     
     //Divide the concepts into different groups
     //tlen record the number of the concepts for each arrays
