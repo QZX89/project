@@ -37,10 +37,9 @@ public class MasterPartition extends Thread{
 	public MasterPartition()
 	{
 		//constructor
-		//yeah!yeah!
 	}
 	
-
+    //The procedure for the code to run in parallel
 	public void run(){
 		//Read an ontology to get the Random Partition
 		
