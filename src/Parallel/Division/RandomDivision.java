@@ -1,6 +1,10 @@
 package Parallel.Division;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 import org.semanticweb.owlapi.model.OWLClass;
 import org.semanticweb.owlapi.model.OWLOntology;
@@ -22,6 +26,24 @@ public class RandomDivision extends Thread{
     	//循环检测关系
     		//调用 subsumption test
     	//生成结果 result =""+AE+";"
+    }
+    
+    protected Set<String> getStrings(String resourceName) throws Exception {
+        Set<String> strings=new HashSet<String>();
+        BufferedReader reader=new BufferedReader(new InputStreamReader(getClass().getResource(resourceName).openStream()));
+        try {
+            String line=reader.readLine();
+            while (line!=null) {
+                strings.add(line);
+                //make an index number for the new added string
+                
+                line=reader.readLine();
+            }
+        }
+        finally {
+            reader.close();
+        }
+        return strings;
     }
     
     //Get all the possible concepts from the possible list
@@ -46,8 +68,6 @@ public class RandomDivision extends Thread{
     {
     	//follow the same method to divide for each thread
     }
-    
-   
     
     
     //Divide the concepts into different groups
