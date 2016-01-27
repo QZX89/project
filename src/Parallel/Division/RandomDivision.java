@@ -22,44 +22,59 @@ public class RandomDivision extends Thread{
     }
     
     public void run(){
-    	//拆分数据 dataset.split (" ?");
+    	//拆分数据 dataset.split ("?");
     	//循环检测关系
     		//调用 subsumption test
     	//生成结果 result =""+AE+";"
     }
     
     protected Set<String> getStrings(String resourceName) throws Exception {
-        Set<String> strings=new HashSet<String>();
-        BufferedReader reader=new BufferedReader(new InputStreamReader(getClass().getResource(resourceName).openStream()));
-        try {
-            String line=reader.readLine();
-            while (line!=null) {
-                strings.add(line);
-                //make an index number for the new added string
-                
-                line=reader.readLine();
-            }
-        }
-        finally {
-            reader.close();
-        }
+       
         return strings;
     }
     
     //Get all the possible concepts from the possible list
-    public void getAllPossibleConcepts()
+    protected Set<String> getAllPossibleConcepts(String resourceName)
     {
-    	//get the number of the total concepts
-    	
-    	//create an array with the same size
-    	
-    	//put all the concepts in the array with an unique index
-    	
+    	 Set<String> strings=new Arraylist<String>();
+    	 List arraylist = new arrayList(); 
+         BufferedReader reader=new BufferedReader(new InputStreamReader(getClass().getResource(resourceName).openStream()));
+         int index=0;
+         try {
+             StringBuffer line=reader.readLine();
+             while (line!=null) {
+            	//put all the concepts in the array with an unique index
+                 strings.add(line);  
+                 //make an index number for the new added string
+                 line.insert(index, line);
+                 index++;
+                 //System.out.println(line);
+                 line=reader.readLine();
+             }
+         }
+         finally {
+             reader.close();
+         }
+         
+         //Disorder the sequence of the possible concept list
+         Collections.shuffle(strings                                                                                                                                       );
+         
+         getTotalNum(index);
+    
+        return strings;	
+    }
+    
+    public int getTotalNum(int index)
+    {
+    	int num = index;
+    	return num;
     }
     
     //Disorder the sequence of the possible concept list
     public void disorderSequence()
     {
+    	
+    	
     	//use shuffle function to disorder the sequence
     }
     
