@@ -33,6 +33,22 @@ public class RandomDivision extends Thread{
         return strings;
     }
     
+    public void initializeList()
+    {
+    	//get the total number of the concepts
+    	
+    	//create a list for each concept with a counter
+    	
+    	//...Give each concept an index number in order to simplify the steps.
+    	
+    	//put all the relevant concepts into each list
+    	//if the relationhip between A&B is A.counter>B.counter then put A into B; otherwise put B into A.
+    	
+    	//For all the concepts in the list, the total number should be n*(n+1)/2
+    	
+    }
+    
+    
     //Get all the possible concepts from the possible list
     protected Set<String> getAllPossibleConcepts(String resourceName)
     {
