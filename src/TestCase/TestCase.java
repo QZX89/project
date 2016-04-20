@@ -45,21 +45,41 @@ public class TestCase {
     OWLClass DConcept,AConcept;
     @Before
     public void setUp() throws OWLOntologyCreationException {
-    	File file = new File("/Users/Zixi/Desktop/JFACT/example/ore_ont_960.owl");
+    	File file = new File("/Users/quanzixi/Downloads/HermiT/project/examples/ontologies/TestExample.owl");
         this.reasonerFactory = new ReasonerFactory();
         OWLOntologyManager manager = OWLManager.createOWLOntologyManager();
         //load the ontology
         this.myOntology = manager.loadOntologyFromOntologyDocument(file); 
         //Extract other Classes to check their satisfiability
         OWLDataFactory dataFactory=manager.getOWLDataFactory();
-        //OWLDataFactory dataFactory= manager.
+       
+        //print out all of the classes 
+        for(OWLCLass cls : ontology.getCLassesInSignature())
+        {
+        	System.out.println(cls);
+        	//make index for each prited concepts and save in an array
+        }
+        //Save a copy to another location in OWL/XML format
+        IRI destination = IRI.create(floder.newFile("TestExample_Copy.xml"));
+        manager.saveOntology(ontology, new OWLXMLDocumentFormat(), destination);
+        //Get all the concepts in the ontoloy
+        
+        //Twice random test
+        
+        //Add to possible list
+        
+        //?Use the cluster to find the group
+        
+        //SubTest from possible list
+        
+        
         //create instance of a concept in ontology
-        IRI DInstance=IRI.create("http://www.semanticweb.org/zixi/ontologies/2015/7/untitled-ontology-309#D");
-        IRI AInstance=IRI.create("http://www.semanticweb.org/zixi/ontologies/2015/7/untitled-ontology-309#A");
+        //IRI DInstance=IRI.create("http://www.semanticweb.org/zixi/ontologies/2015/7/untitled-ontology-309#D");
+        //IRI AInstance=IRI.create("http://www.semanticweb.org/zixi/ontologies/2015/7/untitled-ontology-309#A");
         
         //get the class
-        DConcept=dataFactory.getOWLClass(DInstance);
-        AConcept=dataFactory.getOWLClass(AInstance);
+        //DConcept=dataFactory.getOWLClass(DInstance);
+        //AConcept=dataFactory.getOWLClass(AInstance);
         
     }
     //@Ignore

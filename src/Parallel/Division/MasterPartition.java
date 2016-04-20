@@ -107,6 +107,19 @@ public class MasterPartition extends Thread{
 	public void OrderedDivision(String[] cs, int tlen)
 	{
 		
-	}                                                                                                                                                                                                                                                 
+	}           
+	
+	
+	//
+	AddtoKnownList()
+	{
+		
+	}
+	
+	//
+	AddtoPossibleList()
+	{
+		
+	}
 	
 }
